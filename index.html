@@ -54,15 +54,12 @@ function ajax1() {
     });}};
 const stoplistening = function(){
 	annyang.abort();}
-
-
 if (annyang) {
   const commands = {
     'hello': () => { alert('Hey there, try some commands!'); },
 	'fly to *city': flyToCoords,
 	'stop listening': stoplistening
   };
-
   annyang.addCommands(commands);
   annyang.start();
 }
